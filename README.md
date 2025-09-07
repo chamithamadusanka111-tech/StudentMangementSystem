@@ -34,83 +34,6 @@ A console-based Java application for managing student information using JDBC and
 3. **XAMPP** with MySQL and Apache running
 4. **MySQL Connector/J** JDBC driver
 
-## Setup Instructions
-
-### Step 1: Install and Configure XAMPP
-
-1. Download and install [XAMPP](https://www.apachefriends.org/download.html)
-2. Start XAMPP Control Panel
-3. Start **Apache** and **MySQL** services
-4. Verify MySQL is running on port 3306
-
-### Step 2: Create Database
-
-1. Open your web browser and go to `http://localhost/phpmyadmin`
-2. Click **"SQL"** tab
-3. Copy and paste the contents of `database_schema.sql`
-4. Click **"Go"** to execute the script
-5. Verify that the `student_management` database and `students` table are created
-
-### Step 3: Download MySQL JDBC Driver
-
-1. Download MySQL Connector/J from [MySQL official website](https://dev.mysql.com/downloads/connector/j/)
-2. Extract the downloaded ZIP file
-3. Locate the `mysql-connector-java-x.x.x.jar` file
-
-### Step 4: Setup IntelliJ IDEA Project
-
-1. Open IntelliJ IDEA
-2. Create a new Java project or open existing one
-3. Set Project SDK to Java 17
-4. Create the following directory structure:
-   ```
-   src/
-   ├── com/
-   │   └── studentmanagement/
-   │       ├── StudentManagementApp.java
-   │       ├── dao/
-   │       │   └── StudentDAO.java
-   │       ├── model/
-   │       │   └── Student.java
-   │       ├── service/
-   │       │   └── StudentService.java
-   │       ├── ui/
-   │       │   └── ConsoleUI.java
-   │       └── util/
-   │           ├── DatabaseConnection.java
-   │           └── InputValidator.java
-   ```
-
-### Step 5: Add JDBC Driver to Project
-
-1. In IntelliJ IDEA, right-click on your project
-2. Select **"Open Module Settings"** or press `F4`
-3. Go to **"Libraries"** tab
-4. Click **"+"** → **"Java"**
-5. Navigate to and select the MySQL Connector JAR file
-6. Click **"OK"** to add it to your project
-
-### Step 6: Copy Source Code
-
-1. Copy all the provided Java source files to their respective packages
-2. Ensure all files are in the correct directory structure
-3. Verify that package declarations match the directory structure
-
-### Step 7: Configure Database Connection
-
-Open `DatabaseConnection.java` and verify the connection parameters:
-```java
-private static final String URL = "jdbc:mysql://localhost:3306/student_management";
-private static final String USERNAME = "root";
-private static final String PASSWORD = ""; // Default XAMPP password is empty
-```
-
-### Step 8: Run the Application
-
-1. Open `StudentManagementApp.java`
-2. Right-click and select **"Run 'StudentManagementApp'"**
-3. The console application should start and display the main menu
-
 ## Database Configuration
 
 ### Default Connection Settings
@@ -239,3 +162,7 @@ For issues or questions:
 2. Verify all setup steps are completed correctly
 3. Ensure all prerequisites are properly installed
 4. Check database connectivity and permissions
+
+## License
+
+This project is created for educational purposes.
